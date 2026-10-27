@@ -1,0 +1,145 @@
+/* AdminSidebar.css - Company Administration Sidebar */
+
+.admin-sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: var(--charcoal, #1c1c1a);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  overflow-y: auto;
+  z-index: 40;
+}
+
+.admin-sidebar-header {
+  padding: 24px 20px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--serif);
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.admin-sidebar-badge {
+  font-family: var(--sans);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 2px 6px;
+  background: var(--gold-dark, #8c6d32);
+  color: #fff;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.admin-sidebar-nav {
+  padding: 16px 0 32px;
+  flex: 1;
+}
+
+.admin-nav-group-title {
+  padding: 12px 20px 6px;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+}
+
+.admin-nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11.5px;
+  font-weight: 450;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.admin-nav-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+
+.admin-nav-item.active {
+  background: rgba(197, 160, 89, 0.15);
+  color: var(--gold, #c5a059);
+  border-left: 3px solid var(--gold, #c5a059);
+  padding-left: 17px;
+  font-weight: 600;
+}
+
+.admin-nav-item-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-nav-badge {
+  font-size: 9px;
+  font-weight: 600;
+  padding: 1px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.admin-nav-badge.alert {
+  background: #c62828;
+  color: #fff;
+}
+
+.admin-sidebar-footer {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.admin-user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-user-title {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.admin-user-role-label {
+  font-size: 9.5px;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .admin-sidebar {
+    width: 220px;
+    min-width: 220px;
+  }
+}

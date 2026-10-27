@@ -1,0 +1,118 @@
+/* Multi-Step Checkout */
+.checkout-steps {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+  overflow-x: auto;
+}
+.step-indicator {
+  font-size: 10.5px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.step-indicator.active {
+  color: var(--ink);
+  font-weight: 600;
+}
+.step-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--line);
+  display: grid;
+  place-items: center;
+  font-size: 9px;
+  flex-shrink: 0;
+}
+.step-indicator.active .step-num {
+  background: var(--charcoal);
+  color: #fff;
+}
+
+.checkout-summary-box {
+  background: #faf9f6;
+  border: 1px solid var(--line);
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.checkout-fields-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.checkout-actions-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+.form-group label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%;
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  font-size: 12px;
+  border-radius: var(--radius-sm);
+  outline: 0;
+  background: #fff;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  border-color: var(--gold);
+}
+
+.payment-options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.payment-card-option {
+  border: 1px solid var(--line);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11.5px;
+}
+.payment-card-option.selected {
+  border-color: var(--gold);
+  background: var(--gold-light);
+}
+
+@media (max-width: 640px) {
+  .checkout-summary-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .checkout-fields-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .checkout-actions-row {
+    flex-direction: column;
+  }
+  .payment-options-grid {
+    grid-template-columns: 1fr;
+  }
+}

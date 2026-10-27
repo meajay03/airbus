@@ -1,0 +1,177 @@
+/* Guest Dashboard */
+.dashboard-container {
+  padding: 40px 9% 100px;
+  min-height: 700px;
+}
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.dashboard-header h1 {
+  font: 400 40px var(--serif);
+  margin: 8px 0;
+  color: var(--ink);
+}
+
+.dash-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 36px;
+}
+.metric-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  padding: 22px;
+  border-radius: var(--radius-sm);
+}
+.metric-card span {
+  display: block;
+  font-size: 9.5px;
+  letter-spacing: 1.2px;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.metric-card strong {
+  font: 500 28px var(--serif);
+  color: var(--ink);
+}
+
+.dash-tabs {
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 28px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.dash-tab-btn {
+  font-size: 12px;
+  padding: 10px 0;
+  color: var(--muted);
+  position: relative;
+  white-space: nowrap;
+}
+.dash-tab-btn.active {
+  color: var(--ink);
+  font-weight: 600;
+}
+.dash-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold);
+}
+
+/* Dashboard Booking Cards */
+.dashboard-booking-card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  border-radius: var(--radius-sm);
+}
+.dash-card-image {
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+.dash-card-content {
+  min-width: 0;
+}
+
+/* Messages */
+.messages-layout-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  min-height: 480px;
+}
+.messages-sidebar {
+  border-right: 1px solid var(--line);
+  padding: 16px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .dashboard-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .dash-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 880px) {
+  .messages-layout-grid {
+    grid-template-columns: 1fr;
+  }
+  .messages-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .dashboard-booking-card {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 16px;
+  }
+  .dash-card-image {
+    height: 180px;
+  }
+  .dashboard-booking-card > div:last-child {
+    text-align: left;
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-container {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    padding-bottom: 56px;
+  }
+  .dashboard-header h1 {
+    font-size: 30px;
+  }
+  .dash-metrics-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .metric-card {
+    padding: 16px 14px;
+  }
+  .metric-card strong {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 380px) {
+  .dash-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,393 @@
+/* ExecutiveDashboard.css - Premium Luxury Analytics & Company KPIs */
+
+.exec-dashboard {
+  padding: 32px 40px;
+  background: var(--paper, #fdfbf7);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Header & Controls */
+.exec-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.exec-header-title {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--ink, #1c1c1a);
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+.exec-header-subtitle {
+  font-size: 12px;
+  color: var(--muted, #737373);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.exec-refresh-indicator {
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.exec-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.exec-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border: 1px solid var(--line-strong, #ccc6b8);
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.exec-btn:hover {
+  border-color: var(--charcoal);
+}
+
+.exec-btn.primary {
+  background: var(--charcoal);
+  color: #fff;
+  border-color: var(--charcoal);
+}
+
+.exec-btn.primary:hover {
+  background: var(--gold-dark);
+  border-color: var(--gold-dark);
+}
+
+/* Date Preset Bar */
+.exec-date-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.date-preset-btn {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 5px 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.date-preset-btn:hover {
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.date-preset-btn.active {
+  background: var(--charcoal);
+  color: #fff;
+  border-color: var(--charcoal);
+}
+
+.date-comparison-badge {
+  margin-left: auto;
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--gold-dark);
+  background: var(--gold-light, #faf6ee);
+  padding: 3px 8px;
+  border: 1px solid var(--gold);
+}
+
+/* Top Highlights Grid */
+.exec-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.exec-highlight-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 20px 22px;
+  position: relative;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.exec-highlight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.highlight-value {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.highlight-trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.highlight-trend.up {
+  color: #2e7d32;
+}
+
+.highlight-trend.down {
+  color: #c62828;
+}
+
+.highlight-trend.neutral {
+  color: var(--muted);
+}
+
+/* Charts Section */
+.exec-charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 1024px) {
+  .exec-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 24px;
+}
+
+.chart-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-title {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0;
+}
+
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 10.5px;
+  color: var(--muted);
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+/* Time Series SVG Chart Container */
+.svg-chart-container {
+  width: 100%;
+  height: 220px;
+  position: relative;
+}
+
+.bar-chart-visual {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 180px;
+  padding-top: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.bar-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar-pillars {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  height: 140px;
+  width: 100%;
+  justify-content: center;
+}
+
+.bar-pillar {
+  width: 12px;
+  border-radius: 2px 2px 0 0;
+  transition: height 0.3s ease;
+}
+
+.bar-pillar.gbv {
+  background: var(--charcoal);
+}
+
+.bar-pillar.revenue {
+  background: var(--gold);
+}
+
+.bar-date-label {
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* 22 Global KPI Cards Matrix */
+.exec-matrix-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.matrix-filter-tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.matrix-tab {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.matrix-tab.active {
+  background: var(--charcoal);
+  color: #fff;
+  border-color: var(--charcoal);
+}
+
+.exec-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.exec-kpi-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 16px 18px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.exec-kpi-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.kpi-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.kpi-card-name {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.kpi-card-value {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.kpi-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10.5px;
+  color: var(--muted);
+  border-top: 1px solid var(--paper);
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+.kpi-card-def {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+/* Tables Breakdowns */
+.exec-tables-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 900px) {
+  .exec-tables-grid {
+    grid-template-columns: 1fr;
+  }
+}

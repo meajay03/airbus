@@ -1,0 +1,277 @@
+/* AccountMenu.css - Unified Dynamic Luxury Account Navigation System */
+
+.account-menu-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Anonymous Actions */
+.account-anon-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.account-signin-btn,
+.account-login-btn {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm, 2px);
+  transition: all 0.2s ease;
+}
+
+.account-signin-btn:hover,
+.account-login-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: var(--charcoal);
+  color: var(--ink);
+}
+
+.account-join-btn,
+.account-register-btn {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--charcoal);
+  border: 1px solid var(--charcoal);
+  padding: 8px 18px;
+  border-radius: var(--radius-sm, 2px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.account-join-btn:hover,
+.account-register-btn:hover {
+  background: var(--gold-dark);
+  border-color: var(--gold-dark);
+}
+
+.account-host-btn {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  transition: all 0.2s ease;
+}
+
+.account-host-btn:hover {
+  background: #fff;
+  border-color: var(--charcoal);
+  color: var(--ink);
+}
+
+/* Trigger Button */
+.account-trigger-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px 5px 6px;
+  background: #fff;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.account-trigger-btn:hover,
+.account-trigger-btn.active {
+  border-color: var(--gold);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.account-avatar-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--charcoal);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.account-avatar-badge.admin {
+  background: var(--gold-dark);
+}
+
+.account-avatar-badge.host {
+  background: #1b4332;
+}
+
+.account-user-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.account-user-name {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.account-user-role {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+}
+
+/* Dropdown Menu */
+.account-dropdown-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 280px;
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  animation: accountFadeDown 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes accountFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.account-panel-header {
+  padding: 14px 16px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.account-panel-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.account-panel-email {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: monospace;
+}
+
+.account-panel-role-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  padding: 3px 8px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--gold-light, #faf6ee);
+  color: var(--gold-dark, #8c6d32);
+  border: 1px solid var(--gold, #c5a059);
+}
+
+.account-nav-group {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.account-nav-label {
+  padding: 6px 16px 4px;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.account-nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 450;
+  color: var(--ink-soft);
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+
+.account-nav-item:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.account-nav-item.highlight {
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.account-nav-item.danger {
+  color: #c62828;
+}
+
+.account-nav-item.danger:hover {
+  background: #ffebee;
+}
+
+/* Perspective quick switcher for demo / testing multi-role */
+.account-perspective-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px 12px 8px;
+}
+
+.perspective-pill {
+  padding: 4px 8px;
+  font-size: 9px;
+  font-weight: 600;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.perspective-pill:hover,
+.perspective-pill.current {
+  background: var(--charcoal);
+  color: #fff;
+  border-color: var(--charcoal);
+}

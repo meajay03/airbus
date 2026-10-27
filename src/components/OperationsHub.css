@@ -1,0 +1,12 @@
+/* Operations Hub */
+.operations-layout-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 1050px) {
+  .operations-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}

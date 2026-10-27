@@ -1,0 +1,2 @@
+-- Demo seed data policy: only clearly labeled example properties may be inserted here.
+-- No verified listings, reviews, availability, payment credentials or booking confirmations are seeded.
